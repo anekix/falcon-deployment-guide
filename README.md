@@ -76,8 +76,8 @@ class QuoteResource:
 
         resp.media = quote
 
-app = falcon.API()
-app.add_route('/quote', QuoteResource())
+falcon_app = falcon.API()
+falcon_app.add_route('/quote', QuoteResource())
 ```
 Create a runserver.py file and add the code below
 ```python
