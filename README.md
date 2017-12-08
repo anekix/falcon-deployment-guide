@@ -58,6 +58,27 @@ post-buffering = 1
 
 ## run falcon using werkzeug
 
+assuming this is your `main.py` file
+
+```python
+import falcon
+
+class QuoteResource:
+    def on_get(self, req, resp):
+        """Handles GET requests"""
+        quote = {
+            'quote': (
+                "I've always been more interested in "
+                "the future than in the past."
+            ),
+            'author': 'Grace Hopper'
+        }
+
+        resp.media = quote
+
+app = falcon.API()
+app.add_route('/quote', QuoteResource())
+```
 Create a runserver.py file and add the code below
 ```python
 from main import falcon_app
