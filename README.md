@@ -56,3 +56,15 @@ chmod-socket = 777
 post-buffering = 1
 ```
 
+## run falcon using werkzeug
+
+Create a runserver.py file and add the code below
+```python
+from main import falcon_app
+
+if __name__ == '__main__':
+	from wsgiref.simple_server import make_server
+	httpd = make_server('0.0.0.0', 8081, falcon_app)
+	httpd.serve_forever()
+```
+    
