@@ -1,7 +1,7 @@
 # falcon-deployment-guide
 Deployment Guide for falcon
 
-## Deployment with nginx & uwsgi
+## 1) Deployment with nginx & uwsgi
 
 Nginx acts as the entry point of all requests to the server & then the request is passed to Uwsgi server which runs falcon app.
 
@@ -56,7 +56,7 @@ chmod-socket = 777
 post-buffering = 1
 ```
 
-## run falcon using werkzeug
+## 2) run falcon using werkzeug
 
 assuming this is your `main.py` file
 
